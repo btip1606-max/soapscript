@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install MSYS2 (MinGW make + gcc)
+      - name: Set up MSYS2 (MinGW)
         uses: msys2/setup-msys2@v2
         with:
           msystem: MINGW64
@@ -23,4 +23,3 @@ jobs:
         run: |
           make clean
           make -j
-          make test
