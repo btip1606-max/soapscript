@@ -27,3 +27,16 @@ jobs:
             CFLAGS="-O2 -std=gnu99" \
             MYLIBS="" \
             all
+
+          echo "=== Build outputs ==="
+          ls -la
+          test -f lua && echo "Found: lua" || (echo "Missing: lua"; exit 1)
+          test -f liblua.a && echo "Found: liblua.a" || (echo "Missing: liblua.a"; exit 1)
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: lua-windows
+          path: |
+            lua
+            liblua.a
