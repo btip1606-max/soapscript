@@ -34,7 +34,7 @@
 
 /* minimum size for string buffer */
 #if !defined(LUA_MINBUFFER)
-#define LUA_MINBUFFER   64
+#define LUA_MINBUFFER   75
 #endif
 
 
@@ -44,11 +44,11 @@
 /* ORDER RESERVED */
 
 //THINK OF IT AS THIS 
-//if = as, recur = repeat, other = else, otheras = elseif, sop = local, break = disrupt , job = function, global = soap
+//if = as, recur = repeat, other = else, otheras = elseif, sop = local, break = disrupt , func = function, global = soap
 
 static const char *const luaX_tokens [] = {
     "and", "disrupt", "do", "other", "otheras",
-    "end", "false", "for", "job", "soap", "goto", "as",
+    "end", "false", "for", "func", "soap", "goto", "as",
     "in", "sop", "nil", "not", "or", "repeat",
     "recur", "then", "true", "until", "while",
     "//", "..", "...", "==", ">=", "<=", "~=",
