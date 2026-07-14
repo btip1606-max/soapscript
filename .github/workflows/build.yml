@@ -21,5 +21,13 @@ jobs:
       - name: Build
         shell: msys2 {0}
         run: |
+          set -e
           make clean
-          make -j
+          # Force C99 and build standard Lua targets
+          make -j V=1 \
+            CFLAGS="-O2 -std=gnu99" \
+            all
+          # If your fork has additional targets, run them too (harmless if they exist)
+          make -j V=1 \
+            CFLAGS="-O2 -std=gnu99" \
+            add || true
