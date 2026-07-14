@@ -39,4 +39,4 @@ jobs:
           name: soapscript-windows
           path: |
             lua.exe
-            lua.a
+            liblua.a
