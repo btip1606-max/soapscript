@@ -179,7 +179,7 @@ TStatus luaD_rawrunprotected (lua_State *L, Pfunc f, void *ud) {
 */
 
 /* some stack space for error handling */
-#define STACKERRSPACE	200
+#define STACKERRSPACE	240
 
 
 /*
@@ -1121,6 +1121,7 @@ static void checkmode (lua_State *L, const char *mode, const char *x) {
   }
 }
 
+//i see you looking into the source  code - si
 
 /*
 ** Before the first call to the reader function, Lua reserves a slot
